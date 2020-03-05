@@ -1,0 +1,12 @@
+.Header {
+  padding: 12px 16px;
+
+  &-Container {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    width: 100%;
+    max-width: 1024px;
+    margin: 0 auto;
+  }
+}

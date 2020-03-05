@@ -1,0 +1,17 @@
+.Footer {
+  padding: 12px 20px;
+  background-color: var(--color_default_100);
+  color: var(--font-color_default);
+
+  &-Container {
+    @media (min-width: 1024px) {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+
+    width: 100%;
+    max-width: 1024px;
+    margin: 0 auto;
+  }
+}

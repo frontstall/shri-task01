@@ -1,0 +1,9 @@
+.Main {
+  &_aligned {
+    &_center {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}

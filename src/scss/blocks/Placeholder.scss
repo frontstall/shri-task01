@@ -1,0 +1,18 @@
+.Placeholder {
+  text-align: center;
+  width: 250px;
+  margin: 0 auto;
+
+  &::before {
+    content: url('./img/tools.svg');
+    width: 124px;
+    height: 124px;
+    margin-bottom: 32px;
+  }
+
+  &_Description {
+    font-size: var(--font-size_s);
+    line-height: var(--line-height_s);
+    margin-bottom: 24px;
+  }
+}

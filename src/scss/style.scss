@@ -1,1 +1,16 @@
-@import "./blocks/button.scss"
+@import "./normalize";
+
+@import "./global.scss";
+@import "./fonts.scss";
+@import "./mixins.scss";
+@import "./variables.scss";
+
+@import "./blocks/Button.scss";
+@import "./blocks/Footer.scss";
+@import "./blocks/Header.scss";
+@import "./blocks/Heading.scss";
+@import "./blocks/MainLayout.scss";
+@import "./blocks/Main.scss";
+@import "./blocks/Menu.scss";
+@import "./blocks/Navigation.scss";
+@import "./blocks/Placeholder.scss";

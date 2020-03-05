@@ -1,0 +1,16 @@
+.Heading {
+  &_color {
+    &_default {
+      color: var(--font-color_default);
+    }
+  }
+
+  &_size {
+    &_xl {
+      font-size: var(--font-size_xl);
+      line-height: var(--line-height_xl);
+      margin: 0;
+      font-weight: 500;
+    }
+  }
+}
