@@ -1,0 +1,19 @@
+.Fieldset {
+  border: none;
+  max-width: 474px;
+  margin: 0;
+  padding: 8px 0;
+
+  &-Legend {
+    margin: 0;
+    margin-bottom: 22px;
+    color: var(--font-color_default);
+  }
+
+  &-Row {
+    margin-bottom: 18px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

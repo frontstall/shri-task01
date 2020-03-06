@@ -1,7 +1,6 @@
 .Placeholder {
   text-align: center;
-  width: 250px;
-  margin: 0 auto;
+  width: 200px;
 
   &::before {
     content: url('./img/tools.svg');

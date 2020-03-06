@@ -3,8 +3,9 @@
   flex-direction: column;
   min-height: 100vh;
   min-width: 320px;
-
+  
   &-Content {
     flex-grow: 1;
+    padding: 8px 20px;
   }
 }

@@ -1,0 +1,31 @@
+.Input {
+  padding: 11px 13px 10px;
+  border: 2px solid var(--color_default_400);
+  border-radius: 4px;
+
+  &::placeholder {
+    color: var(--font-color_secondary);
+  }
+
+  &:focus {
+    border-color: var(--color_default_500);
+    outline: none;
+  }
+
+  &_fluid {
+    display: block;
+    width: 100%;
+  }
+
+  &_size {
+    &_s {
+      width: 52px;
+    }
+  }
+
+  &_align {
+    &_right {
+      text-align: right;
+    }
+  }
+}

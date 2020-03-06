@@ -1,0 +1,14 @@
+.InputGroup {
+  position: relative;
+
+  &-Label {
+    margin: 0;
+    margin-bottom: 6px;
+  }
+
+  &_inline {
+    .InputGroup-Input {
+      margin: 0 8px;
+    }
+  }
+}

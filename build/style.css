@@ -377,6 +377,8 @@ a {
   --color_default_100: #F0F2F3;
   --color_default_200: #F2F2F2;
   --color_default_300: #E6E6E6;
+  --color_default_400: #D9D9D9;
+  --color_default_500: #B3B3B3;
   --color_danger: #FF3333;
   --color_success: #00B341;
   --color_warning: #FF9A00;
@@ -391,6 +393,8 @@ a {
   --line-height_xxl: 30px;
   --font-color_default: #7F8285;
   --font-color_accent: #000000;
+  --font-color_danger: #FF3333;
+  --font-color_secondary: #CCCCCC;
 }
 
 .Button {
@@ -398,6 +402,7 @@ a {
   border: none;
   border-radius: 4px;
   text-align: center;
+  cursor: pointer;
 }
 
 .Button_size_s {
@@ -442,6 +447,61 @@ a {
   }
 }
 
+.ButtonGroup {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+@media (min-width: 1024px) {
+  .ButtonGroup {
+    display: block;
+  }
+}
+
+.ButtonGroup-Item {
+  margin-bottom: 12px;
+}
+
+@media (min-width: 1024px) {
+  .ButtonGroup-Item {
+    margin-bottom: 0;
+    margin-right: 8px;
+  }
+}
+
+.ButtonGroup-Item:last-child {
+  margin-bottom: 0;
+}
+
+@media (min-width: 1024px) {
+  .ButtonGroup-Item:last-child {
+    margin-right: 0;
+  }
+}
+
+.Fieldset {
+  border: none;
+  max-width: 474px;
+  margin: 0;
+  padding: 8px 0;
+}
+
+.Fieldset-Legend {
+  margin: 0;
+  margin-bottom: 22px;
+  color: var(--font-color_default);
+}
+
+.Fieldset-Row {
+  margin-bottom: 18px;
+}
+
+.Fieldset-Row:last-child {
+  margin-bottom: 0;
+}
+
 .Footer {
   padding: 12px 20px;
   background-color: var(--color_default_100);
@@ -479,11 +539,63 @@ a {
   color: var(--font-color_default);
 }
 
+.Heading_color_accent {
+  color: var(--font-color_accent);
+}
+
+.Heading_size_m {
+  font-size: var(--font-size_m);
+  line-height: var(--line-height_l);
+  margin: 0;
+  font-weight: 500;
+}
+
 .Heading_size_xl {
   font-size: var(--font-size_xl);
   line-height: var(--line-height_xl);
   margin: 0;
   font-weight: 500;
+}
+
+.Input {
+  padding: 11px 13px 10px;
+  border: 2px solid var(--color_default_400);
+  border-radius: 4px;
+}
+
+.Input::placeholder {
+  color: var(--font-color_secondary);
+}
+
+.Input:focus {
+  border-color: var(--color_default_500);
+  outline: none;
+}
+
+.Input_fluid {
+  display: block;
+  width: 100%;
+}
+
+.Input_size_s {
+  width: 52px;
+}
+
+.Input_align_right {
+  text-align: right;
+}
+
+.InputGroup {
+  position: relative;
+}
+
+.InputGroup-Label {
+  margin: 0;
+  margin-bottom: 6px;
+}
+
+.InputGroup_inline .InputGroup-Input {
+  margin: 0 8px;
 }
 
 .MainLayout {
@@ -495,12 +607,18 @@ a {
 
 .MainLayout-Content {
   flex-grow: 1;
+  padding: 8px 20px;
 }
 
 .Main_aligned_center {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.Main-Container {
+  max-width: 1024px;
+  margin: 0 auto;
 }
 
 .Menu {
@@ -542,8 +660,7 @@ a {
 
 .Placeholder {
   text-align: center;
-  width: 250px;
-  margin: 0 auto;
+  width: 200px;
 }
 
 .Placeholder::before {
@@ -557,4 +674,8 @@ a {
   font-size: var(--font-size_s);
   line-height: var(--line-height_s);
   margin-bottom: 24px;
+}
+
+.Text_color_danger {
+  color: var(--font-color_danger);
 }
