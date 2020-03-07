@@ -30,16 +30,25 @@
   }
 
   &_iconed {
-    &_gear {
-      display: flex;
-      align-items: center;
+    display: flex;
+    align-items: center;
 
+    &_gear {
       &::before {
         content: url('./img/gear.svg');
         width: 12px;
-        height: 12px;
+        height: 14px;
       }
     }
+
+    &_run {
+      &::before {
+        content: url('./img/run.svg');
+        width: 9px;
+        height: 14px;
+      }
+    }
+    
 
     .Button-Text {
       display: none;

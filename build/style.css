@@ -379,11 +379,13 @@ a {
   --color_default_300: #E6E6E6;
   --color_default_400: #D9D9D9;
   --color_default_500: #B3B3B3;
+  --color_default_600: #6B6B6B;
   --color_danger: #FF3333;
   --color_success: #00B341;
   --color_warning: #FF9A00;
   --font-size_s: 13px;
   --font-size_m: 15px;
+  --font-size_ml: 16px;
   --font-size_l: 18px;
   --font-size_xl: 24px;
   --line-height_s: 15px;
@@ -392,9 +394,211 @@ a {
   --line-height_xl: 28px;
   --line-height_xxl: 30px;
   --font-color_default: #7F8285;
+  --font-color_default_500: #595959;
   --font-color_accent: #000000;
-  --font-color_danger: #FF3333;
   --font-color_secondary: #CCCCCC;
+}
+
+.Build {
+  position: relative;
+  display: block;
+  background-color: #FFFFFF;
+  box-shadow: 0px 1px 2px rgba(67, 68, 69, 0.3), 0px 0px 2px rgba(67, 68, 69, 0.3);
+  border-radius: 6px;
+  padding: 16px 12px 16px 36px;
+}
+
+@media (min-width: 1024px) {
+  .Build {
+    padding: 12px 24px 12px 56px;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.Build::before {
+  position: absolute;
+  top: 17px;
+  left: 13px;
+  content: '';
+  width: 14px;
+  height: 14px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media (min-width: 1024px) {
+  .Build::before {
+    width: 21px;
+    height: 21px;
+    top: 11px;
+    left: 25px;
+  }
+}
+
+.Build:hover, .Build:focus {
+  box-shadow: 0px 2px 8px rgba(67, 68, 69, 0.3), 0px 0px 1px rgba(67, 68, 69, 0.3);
+}
+
+.Build_status_success::before {
+  background-image: url("./img/success.svg");
+}
+
+.Build_status_success .Build-Number {
+  color: var(--color_success);
+}
+
+.Build_status_danger::before {
+  background-image: url("./img/failure.svg");
+}
+
+.Build_status_danger .Build-Number {
+  color: var(--color_danger);
+}
+
+.Build_status_warning::before {
+  background-image: url("./img/pending.svg");
+}
+
+.Build_status_warning .Build-Number {
+  color: var(--color_warning);
+}
+
+.Build-Info {
+  margin-bottom: 8px;
+}
+
+@media (min-width: 1024px) {
+  .Build-Info {
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .Build-Heading {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.Build-Number {
+  font-size: var(--font-size_ml);
+  line-height: 1;
+  margin-bottom: 8px;
+  margin-top: 0;
+  font-weight: 500;
+}
+
+@media (min-width: 1024px) {
+  .Build-Number {
+    font-size: var(--font-size_l);
+    line-height: var(--line-height_l);
+    margin-right: 4px;
+  }
+}
+
+.Build-Name {
+  font-size: var(--font-size_m);
+  line-height: var(--line-height_l);
+  font-weight: normal;
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+
+@media (min-width: 1024px) {
+  .Build-Description {
+    display: flex;
+  }
+}
+
+.Build-CommitData {
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+
+@media (min-width: 1024px) {
+  .Build-CommitData {
+    margin-bottom: 0;
+    margin-right: 10px;
+  }
+}
+
+.Build-Branch {
+  margin-right: 4px;
+}
+
+.Build-Branch::before {
+  content: url("./img/commit.svg");
+  width: 16px;
+  height: 8px;
+  opacity: 0.3;
+}
+
+.Build-Hash {
+  color: var(--color_default_600);
+}
+
+.Build-Author {
+  display: flex;
+  align-items: center;
+}
+
+.Build-Author::before {
+  content: url("./img/user.svg");
+  width: 12px;
+  height: 14px;
+  margin-right: 6px;
+  opacity: 0.3;
+}
+
+.Build-Meta {
+  display: flex;
+  border-top: 1px solid var(--color_default_100);
+  padding-top: 8px;
+  color: var(--font-color_default_500);
+}
+
+@media (min-width: 1024px) {
+  .Build-Meta {
+    border-top: none;
+    display: flex;
+    flex-direction: column;
+    padding-top: 0;
+  }
+}
+
+.Build-Date {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
+
+@media (min-width: 1024px) {
+  .Build-Date {
+    margin-bottom: 8px;
+    margin-right: 0;
+  }
+}
+
+.Build-Date::before {
+  content: url("./img/calendar.svg");
+  width: 14px;
+  height: 16px;
+  margin-right: 6px;
+  opacity: 0.3;
+}
+
+.Build-Duration {
+  display: flex;
+  align-items: center;
+}
+
+.Build-Duration::before {
+  content: url("./img/timer.svg");
+  width: 13px;
+  height: 16px;
+  margin-right: 6px;
+  opacity: 0.3;
 }
 
 .Button {
@@ -425,7 +629,7 @@ a {
   color: var(--font-color_accent);
 }
 
-.Button_iconed_gear {
+.Button_iconed {
   display: flex;
   align-items: center;
 }
@@ -433,7 +637,13 @@ a {
 .Button_iconed_gear::before {
   content: url("./img/gear.svg");
   width: 12px;
-  height: 12px;
+  height: 14px;
+}
+
+.Button_iconed_run::before {
+  content: url("./img/run.svg");
+  width: 9px;
+  height: 14px;
 }
 
 .Button_iconed .Button-Text {
@@ -535,28 +745,6 @@ a {
   margin: 0 auto;
 }
 
-.Heading_color_default {
-  color: var(--font-color_default);
-}
-
-.Heading_color_accent {
-  color: var(--font-color_accent);
-}
-
-.Heading_size_m {
-  font-size: var(--font-size_m);
-  line-height: var(--line-height_l);
-  margin: 0;
-  font-weight: 500;
-}
-
-.Heading_size_xl {
-  font-size: var(--font-size_xl);
-  line-height: var(--line-height_xl);
-  margin: 0;
-  font-weight: 500;
-}
-
 .Input {
   padding: 11px 13px 10px;
   border: 2px solid var(--color_default_400);
@@ -583,6 +771,34 @@ a {
 
 .Input_align_right {
   text-align: right;
+}
+
+.Heading_color_default {
+  color: var(--font-color_default);
+}
+
+.Heading_color_accent {
+  color: var(--font-color_accent);
+}
+
+.Heading_size_m {
+  font-size: var(--font-size_m);
+  line-height: var(--line-height_l);
+  margin: 0;
+  font-weight: 500;
+}
+
+.Heading_size_l {
+  font-size: var(--font-size_l);
+  line-height: var(--line-height_l);
+  font-weight: 500;
+}
+
+.Heading_size_xl {
+  font-size: var(--font-size_xl);
+  line-height: var(--line-height_xl);
+  margin: 0;
+  font-weight: 500;
 }
 
 .InputGroup {
@@ -625,6 +841,7 @@ a {
   margin: 0;
   padding: 0;
   list-style: none;
+  display: flex;
 }
 
 .Menu-Item {
@@ -658,6 +875,21 @@ a {
   margin-right: 0;
 }
 
+.Pagination-List {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  margin-bottom: 8px;
+}
+
+.Pagination-ListItem {
+  margin-bottom: 8px;
+}
+
+.Pagination-ListItem:last-child {
+  margin-bottom: 0;
+}
+
 .Placeholder {
   text-align: center;
   width: 200px;
@@ -677,5 +909,5 @@ a {
 }
 
 .Text_color_danger {
-  color: var(--font-color_danger);
+  color: var(--color_danger);
 }
