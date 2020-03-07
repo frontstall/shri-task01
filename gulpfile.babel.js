@@ -21,7 +21,7 @@ const css = () => src('src/scss/style.scss')
   .pipe(dest('build'))
   .pipe(server.stream());
 
-const copy = () => src('src/img/**', { base: 'src' })
+const copy = () => src(['src/img/**', 'src/normalize/**'], { base: 'src' })
   .pipe(dest('build'));
 
 export const build = series(clean, copy, parallel(html, css));

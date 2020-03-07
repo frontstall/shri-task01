@@ -6,10 +6,37 @@
   border-radius: 6px;
   padding: 16px 12px 16px 36px;
 
-  @media (min-width: 1024px) {
+  @media (min-width: $tablet-width) {
     padding: 12px 24px 12px 56px;
-    display: flex;
-    justify-content: space-between;
+  }
+
+  &_adaptive {
+    @media (min-width: $tablet-width) {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .Build-Info {
+      @media (min-width: $tablet-width) {
+        margin-bottom: 0;
+      }
+    }
+
+    .Build-Meta {
+      @media (min-width: $tablet-width) {
+        border-top: none;
+        display: flex;
+        flex-direction: column;
+        padding-top: 0;
+      }
+    }
+
+    .Build-Date {
+      @media (min-width: $tablet-width) {
+        margin-bottom: 8px;
+        margin-right: 0;
+      }
+    }
   }
 
   &::before {
@@ -22,16 +49,12 @@
     background-repeat: no-repeat;
     background-size: cover;
 
-    @media (min-width: 1024px) {
+    @media (min-width: $tablet-width) {
       width: 21px;
       height: 21px;
       top: 11px;
       left: 25px;
     }
-  }
-
-  &:hover, &:focus {
-    box-shadow: 0px 2px 8px rgba(67, 68, 69, 0.3), 0px 0px 1px rgba(67, 68, 69, 0.3);
   }
 
   &_status {
@@ -68,14 +91,10 @@
 
   &-Info {
     margin-bottom: 8px;
-
-    @media (min-width: 1024px) {
-      margin-bottom: 0;
-    }
   }
 
   &-Heading {
-    @media (min-width: 1024px) {
+    @media (min-width: $tablet-width) {
       display: flex;
       align-items: center;
     }
@@ -88,7 +107,7 @@
     margin-top: 0;
     font-weight: 500;
 
-    @media (min-width: 1024px) {
+    @media (min-width: $tablet-width) {
       font-size: var(--font-size_l);
       line-height: var(--line-height_l);
       margin-right: 4px;
@@ -104,7 +123,7 @@
   }
 
   &-Description {
-    @media (min-width: 1024px) {
+    @media (min-width: $tablet-width) {
       display: flex;
     }
   }
@@ -113,7 +132,7 @@
     margin-top: 0;
     margin-bottom: 8px;
 
-    @media (min-width: 1024px) {
+    @media (min-width: $tablet-width) {
       margin-bottom: 0;
       margin-right: 10px;
     }
@@ -152,24 +171,12 @@
     border-top: 1px solid var(--color_default_100);
     padding-top: 8px;
     color: var(--font-color_default_500);
-
-    @media (min-width: 1024px) {
-      border-top: none;
-      display: flex;
-      flex-direction: column;
-      padding-top: 0;
-    }
   }
 
   &-Date {
     display: flex;
     align-items: center;
     margin-right: 10px;
-
-    @media (min-width: 1024px) {
-      margin-bottom: 8px;
-      margin-right: 0;
-    }
 
     &::before {
       content: url('./img/calendar.svg');

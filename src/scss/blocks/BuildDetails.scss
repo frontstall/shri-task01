@@ -1,0 +1,37 @@
+.BuildDetails {
+  &-Build {
+    max-width: $desktop-width;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 16px;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-sizing: content-box;
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 12px;
+    }
+  }
+
+  &-Container {
+    @media (min-width: $tablet-width) {
+      max-width: $desktop-width;
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 20px;
+      padding-right: 20px;
+      box-sizing: content-box;
+    }
+  }
+
+  &-Flow {
+    overflow: auto;
+    padding: 8px 12px;
+    background-color: var(--color_default_200);
+    margin: 0;
+  
+    @media (min-width: $tablet-width) {
+      border-radius: 6px;
+    }
+  }
+}

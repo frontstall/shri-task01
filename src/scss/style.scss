@@ -1,11 +1,10 @@
-@import "./normalize";
-
 @import "./global.scss";
 @import "./fonts.scss";
 @import "./mixins.scss";
 @import "./variables.scss";
 
 @import "./blocks/Build.scss";
+@import "./blocks/BuildDetails.scss";
 @import "./blocks/Button.scss";
 @import "./blocks/ButtonGroup.scss";
 @import "./blocks/Fieldset.scss";

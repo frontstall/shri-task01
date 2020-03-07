@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Start screen</title>
+  <link rel="stylesheet" href="./normalize/normalize.css">
   <link rel="stylesheet" href="./style.css">
 </head>
 <body class="MainLayout">
@@ -19,58 +20,77 @@
       <h2 class="Heading Heading_size_m">
         Settings
       </h2>
-      <fieldset class="Fieldset">
-        <p class="Fieldset-Legend">
-          Configure repository connection and synchronization settings.
-        </p>
-        <div class="Fieldset-Row">
-          <label class="InputGroup">
-            <p class="InputGroup-Label">
-              GitHub repository<span class="Text Text_color_danger">*</span>
-            </p>
-            <input
-              type="text"
-              class="InputGroup-Input Input Input_clearable Input_fluid"
-              placeholder="user-name/repo-name" />
-          </label>
-        </div>          
-        <div class="Fieldset-Row">
-          <label class="InputGroup">
-            <p class="InputGroup-Label">
-              Build command
-            </p>
-            <input
-              type="text"
-              class="InputGroup-Input Input Input_clearable Input_fluid"
-              placeholder="npm ci && npm run build" />
-          </label>
-        </div>          
-        <div class="Fieldset-Row">
-          <label class="Fieldset-Label InputGroup">
-            <p class="InputGroup-Label">
-              Main branch
-            </p>
-            <input
-              type="text"
-              class="InputGroup-Input Input Input_clearable Input_fluid"
-              placeholder="master" />
-          </label>
-        </div>
-        <div class="Fieldset-Row">
-          <label class="Fieldset-Label InputGroup InputGroup_inline">
-            Synchronize every
-            <input
-              type="text"
-              class="InputGroup-Input Input Input_size_s Input_align_right"
-              placeholder="10" />
-            minutes
-          </label>
-        </div>
-        <div class="Fieldset-Row ButtonGroup">
-          <button class="ButtonGroup-Item Button Button_size_m Button_color_accent" type="button">Save</button>
-          <button class="ButtonGroup-Item Button Button_size_m Button_color_default" type="button">Cancel</button>
-        </div>
-      </fieldset>
+      <form action="/" class="Form">
+        <fieldset class="Fieldset">
+          <p class="Fieldset-Legend">
+            Configure repository connection and synchronization settings.
+          </p>
+          <div class="Fieldset-Row">
+            <div class="InputGroup">
+              <label class="InputGroup-Label" for="repository">
+                GitHub repository<span class="Text Text_color_danger">*</span>
+              </label>
+              <input
+                type="text"
+                class="InputGroup-Input Input Input_clearable Input_fluid"
+                placeholder="user-name/repo-name"
+                id="repository"
+              />
+              <div class="InputGroup-IconWrapper">
+                <button class="InputGroup-Icon" type="button"></button>
+              </div>
+            </div>
+          </div>          
+          <div class="Fieldset-Row">
+            <div class="InputGroup">
+              <label class="InputGroup-Label" for="command">
+                Build command
+              </label>
+              <input
+                type="text"
+                class="InputGroup-Input Input Input_clearable Input_fluid"
+                placeholder="npm ci && npm run build"
+                id="command"
+              />
+              <div class="InputGroup-IconWrapper">
+                <button class="InputGroup-Icon" type="button"></button>
+              </div>
+            </div>
+          </div>          
+          <div class="Fieldset-Row">
+            <div class="Fieldset-Label InputGroup">
+              <label class="InputGroup-Label" for="branch">
+                Main branch
+              </label>
+              <input
+                type="text"
+                class="InputGroup-Input Input Input_clearable Input_fluid"
+                placeholder="master"
+                id="branch"
+              />
+              <div class="InputGroup-IconWrapper">
+                <button class="InputGroup-Icon" type="button"></button>
+              </div>
+            </div>
+          </div>
+          <div class="Fieldset-Row">
+            <div class="Fieldset-Label InputGroup InputGroup_inline">
+              Synchronize every
+              <input
+                type="text"
+                class="InputGroup-Input Input Input_size_s Input_align_right"
+                placeholder="10"
+                id="interval"
+              />
+              minutes
+            </div>
+          </div>
+          <div class="Fieldset-Row ButtonGroup">
+            <button class="ButtonGroup-Item Button Button_size_m Button_color_accent" type="submit">Save</button>
+            <button class="ButtonGroup-Item Button Button_size_m Button_color_default" type="button">Cancel</button>
+          </div>
+        </fieldset>
+      </form>
     </div>
   </main>
   <footer class="Footer">

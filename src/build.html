@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Start screen</title>
+  <link rel="stylesheet" href="./normalize/normalize.css">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body class="MainLayout">
+  <header class="Header">
+    <div class="Header-Container">
+      <a href="#" class="Header-Logo">
+        <h1 class="Heading Heading_color_accent Heading_size_xl">philip1967/my-awesome-repo</h1>
+      </a>
+      <ul class="Header-Menu Menu">
+        <li class="Menu-Item">
+          <button type="button" class="Button Button_color_default Button_size_s Button_iconed Button_iconed_refresh">
+            <span class="Button-Text">Rebuild</span>
+          </button>
+        </li>
+        <li class="Menu-Item">
+          <a href="/settings.html" class="Button Button_color_default Button_size_s Button_iconed Button_iconed_gear">
+          </a>
+        </li>
+      </ul>
+    </div>
+  </header>
+  <main class="Main MainLayout-Content">
+    <div class="BuildDetails">
+      <div class="BuildDetails-Build Main-Container">
+        <div class="Build Build_status_success">
+          <div class="Build-Info">
+            <div class="Build-Heading">
+              <h2 class="Build-Number">#1368</h2>
+              <p class="Build-Name">add documentation for postgres scaler</p>
+            </div>
+            <div class="Build-Description">
+              <p class="Build-CommitData">
+               <span class="Build-Branch">
+                 master
+               </span>
+               <span class="Build-Hash">
+                 9c9f0b9
+               </span>
+              </p>
+              <span class="Build-Author">
+                Philip Kirkorov
+              </span>
+             </div>
+          </div>
+          <div class="Build-Meta">
+            <span class="Build-Date">
+              21 янв, 03:06
+            </span>
+            <span class="Build-Duration">
+              1 ч 20 мин
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="BuildDetails-Container">
+         <pre class="BuildDetails-Flow">
+  Starting type checking and linting service...
+  Using 1 worker with 2048MB memory limit
+  Hash: <b>d54ed20309f352b3bda76cbbb6d272ed6afde438bd7a265eb08db3624c32dfc883a8c379c67f4de6</b>
+  Version: webpack 4.41.6
+  Child
+      Hash: d54ed20309f352b3bda7
+      Time: 40364ms
+      Built at: 2020-02-23 16:04:54
+                                        Asset      Size  Chunks             Chunk Names
+                          0.bundle.static.css  1.31 MiB       0  [emitted]  vendors~main
+                           0.bundle.static.js  10.3 MiB       0  [emitted]  vendors~main
+                            bundle.static.css  48.6 KiB       1  [emitted]  main
+                             bundle.static.js   613 KiB       1  [emitted]  main
+                static/media/Cat.afa2191f.svg  9.83 KiB          [emitted]
+        static/media/illustration.a17c1b18.svg 14.8 KiB          [emitted]
+             static/media/picture.eef6f3b8.svg 16.2 KiB          [emitted]
+        Entrypoint main = 0.bundle.static.css 0.bundle.static.js bundle.static.css bundle.static.js
+        [./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 472 bytes {0} [built]
+        [./src/account/actions/index.ts] 2.46 KiB {1} [built]
+        [./src/account/api/lib/models/index.ts] 2.17 KiB {1} [built]
+        [./src/account/api/lib/models/mappers.ts] 21 KiB {1} [built]
+        [./src/account/api/lib/schoolaccountAPI.ts] 4.97 KiB {1} [built]
+        [./src/account/api/lib/schoolaccountAPIContext.ts] 1.73 KiB {1} [built]
+        [./src/account/epics/index.ts] 328 bytes {1} [built]
+        [./src/account/epics/pageData.ts] 834 bytes {1} [built]
+        [./src/account/epics/personalPage.ts] 2.29 KiB {1} [built]
+        [./src/account/epics/registrationForm.ts] 910 bytes {1} [built]
+        [./src/account/index.tsx] 561 bytes {1} [built]
+        [./src/account/reducers/githubRepos.ts] 837 bytes {1} [built]
+        [./src/account/reducers/index.ts] 1.83 KiB {1} [built]
+        [./src/account/reducers/serverError.ts] 526 bytes {1} [built]
+        [./src/account/store.ts] 1.05 KiB {1} [built]
+            + 1864 hidden modules
+  Child
+      Hash: 6cbbb6d272ed6afde438
+      Time: 32877ms
+      Built at: 2020-02-23 16:04:47
+          Asset      Size  Chunks             Chunk Names
+      server.js  6.34 MiB    main [emitted]    main
+      Entrypoint main = server.js
+      [./src/account/actions/index.ts] 2.46 KiB {main} [built]
+      [./src/account/api/lib/models/index.ts] 2.17 KiB {main} [built]
+      [./src/account/api/lib/models/mappers.ts] 21 KiB {main} [built]
+      [./src/account/api/lib/schoolaccountAPI.ts] 4.97 KiB {main} [built]
+      [./src/account/api/lib/schoolaccountAPIContext.ts] 1.73 KiB {main} [built]
+      [./src/account/epics/index.ts] 328 bytes {main} [built]
+      [./src/account/epics/pageData.ts] 834 bytes {main} [built]
+      [./src/account/epics/personalPage.ts] 2.29 KiB {main} [built]
+      [./src/account/epics/registrationForm.ts] 910 bytes {main} [built]
+      [./src/account/mappers/index.ts] 2.18 KiB {main} [built]
+      [./src/account/reducers/githubRepos.ts] 837 bytes {main} [built]
+      [./src/account/reducers/index.ts] 1.83 KiB {main} [built]
+      [./src/account/reducers/serverError.ts] 526 bytes {main} [built]
+      [./src/account/server.tsx] 1.62 KiB {main} [built]
+      [./src/account/store.ts] 1.05 KiB {main} [built]
+          + 1484 hidden modules
+        </pre>
+      </div>
+    </div>
+  </main>
+  <footer class="Footer">
+    <div class="Footer-Container">
+      <ul class="Footer-Navigation Navigation">
+        <li class="Navigation-Item">
+          <a href="#" class="Navigation-Link">Support</a>
+        </li>
+        <li class="Navigation-Item">
+          <a href="#" class="Navivation-Link">Learning</a>
+        </li>
+      </ul>
+      <a href="#" class="Footer-Copyright">&copy;2020 Your Name</a>
+    </div>
+  </footer>
+</body>
+</html>
