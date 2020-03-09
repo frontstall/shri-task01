@@ -19,6 +19,16 @@
     .Build-Info {
       @media (min-width: $tablet-width) {
         margin-bottom: 0;
+        overflow: hidden;
+      }
+    }
+
+    .Build-Name {
+      @media (min-width: $tablet-width) {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        padding-right: 30px;
       }
     }
 
@@ -28,6 +38,7 @@
         display: flex;
         flex-direction: column;
         padding-top: 0;
+        flex-shrink: 0;
       }
     }
 

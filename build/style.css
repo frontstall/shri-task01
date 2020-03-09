@@ -89,6 +89,16 @@ a {
 @media (min-width: 768px) {
   .Build_adaptive .Build-Info {
     margin-bottom: 0;
+    overflow: hidden;
+  }
+}
+
+@media (min-width: 768px) {
+  .Build_adaptive .Build-Name {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-right: 30px;
   }
 }
 
@@ -98,6 +108,7 @@ a {
     display: flex;
     flex-direction: column;
     padding-top: 0;
+    flex-shrink: 0;
   }
 }
 
